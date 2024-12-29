@@ -57,7 +57,7 @@ export function Header() {
       <div className="container flex h-16 items-center justify-between mx-auto px-4">
         <button onClick={() => scrollToSection('home')} className="flex items-center space-x-2">
           <Image 
-            src="/logo-limpio.PNG" 
+            src="/logo-limpio.png" 
             alt="Code Studio Solutions Logo" 
             width={40}
             height={40}
