@@ -63,6 +63,11 @@ export function Header() {
             height={40}
             className="rounded-full"
             priority
+            onError={(e) => {
+              const target = e.target as HTMLImageElement;
+              target.onerror = null;
+              target.src = '/fallback-logo.png'; // Provide a fallback logo
+            }}
           />
           <span className="font-bold text-xl text-gray-800 dark:text-gray-200">Code Studio Solutions</span>
         </button>
