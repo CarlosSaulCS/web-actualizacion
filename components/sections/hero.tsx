@@ -23,7 +23,7 @@ export function Hero() {
         <div className="flex flex-col items-center justify-center space-y-6 text-center max-w-4xl mx-auto">
           <ScrollAnimation>
             <Image
-              src="/log2.PNG"
+              src="/logo-limpio.png"
               alt="Code Solutions Studio Logo"
               width={250}
               height={250}
