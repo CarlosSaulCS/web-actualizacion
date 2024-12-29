@@ -37,7 +37,7 @@ export function ContactForm() {
 
   return (
     <Card className={`w-full border-none shadow-xl ${
-  theme === 'dark' ? 'bg-[#1A1F2B]' : 'bg-white'
+  theme === 'dark' ? 'bg-gray-800 text-white' : 'bg-white text-gray-800'
 }`}>
       <CardContent className="p-8">
         <form onSubmit={handleSubmit} className="space-y-6">

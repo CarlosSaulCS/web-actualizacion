@@ -27,48 +27,48 @@ export function Footer() {
 
   return (
     <footer className={`${
-  theme === 'dark' ? 'bg-[#1A1F2B] text-gray-300' : 'bg-white text-gray-600'
-}`}>
+      theme === 'dark' ? 'bg-gray-900 text-gray-300' : 'bg-white text-gray-600'
+    }`}>
       <div className="container mx-auto py-16 px-4">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
           <div>
             <h3 className={`text-lg font-semibold mb-4 ${
-  theme === 'dark' ? 'text-white' : 'text-gray-900'
-}`}>
+              theme === 'dark' ? 'text-white' : 'text-gray-900'
+            }`}>
               {t.footer.aboutUsTitle}
             </h3>
             <p className={`text-sm ${
-  theme === 'dark' ? 'text-gray-400' : 'text-gray-500'
-}`}>
+              theme === 'dark' ? 'text-gray-400' : 'text-gray-500'
+            }`}>
               {t.footer.aboutUsDescription}
             </p>
           </div>
           <div>
             <h3 className={`text-lg font-semibold mb-4 ${
-  theme === 'dark' ? 'text-white' : 'text-gray-900'
-}`}>
+              theme === 'dark' ? 'text-white' : 'text-gray-900'
+            }`}>
               {t.footer.quickLinksTitle}
             </h3>
             <nav className="flex flex-col space-y-2">
-              <button onClick={() => handleNavigation('home')} className="text-sm text-left text-gray-400 hover:text-white transition-colors">{t.nav.home}</button>
-              <button onClick={() => handleNavigation('nosotros')} className="text-sm text-left text-gray-400 hover:text-white transition-colors">{t.nav.about}</button>
-              <button onClick={() => handleNavigation('servicios')} className="text-sm text-left text-gray-400 hover:text-white transition-colors">{t.nav.services}</button>
-              <button onClick={() => handleNavigation('proyectos')} className="text-sm text-left text-gray-400 hover:text-white transition-colors">{t.nav.projects}</button>
-              <button onClick={() => handleNavigation('contacto')} className="text-sm text-left text-gray-400 hover:text-white transition-colors">{t.nav.contact}</button>
+              <button onClick={() => handleNavigation('home')} className={`text-sm text-left ${theme === 'dark' ? 'text-gray-400 hover:text-white' : 'text-gray-600 hover:text-gray-900'} transition-colors`}>{t.nav.home}</button>
+              <button onClick={() => handleNavigation('nosotros')} className={`text-sm text-left ${theme === 'dark' ? 'text-gray-400 hover:text-white' : 'text-gray-600 hover:text-gray-900'} transition-colors`}>{t.nav.about}</button>
+              <button onClick={() => handleNavigation('servicios')} className={`text-sm text-left ${theme === 'dark' ? 'text-gray-400 hover:text-white' : 'text-gray-600 hover:text-gray-900'} transition-colors`}>{t.nav.services}</button>
+              <button onClick={() => handleNavigation('proyectos')} className={`text-sm text-left ${theme === 'dark' ? 'text-gray-400 hover:text-white' : 'text-gray-600 hover:text-gray-900'} transition-colors`}>{t.nav.projects}</button>
+              <button onClick={() => handleNavigation('contacto')} className={`text-sm text-left ${theme === 'dark' ? 'text-gray-400 hover:text-white' : 'text-gray-600 hover:text-gray-900'} transition-colors`}>{t.nav.contact}</button>
             </nav>
           </div>
           <div>
             <h3 className={`text-lg font-semibold mb-4 ${
-  theme === 'dark' ? 'text-white' : 'text-gray-900'
-}`}>
+              theme === 'dark' ? 'text-white' : 'text-gray-900'
+            }`}>
               {t.footer.contactTitle}
             </h3>
             <div className={`text-sm ${
-  theme === 'dark' ? 'text-gray-400' : 'text-gray-500'
-} space-y-2`}>
+              theme === 'dark' ? 'text-gray-400' : 'text-gray-500'
+            } space-y-2`}>
               <a 
                 href="mailto:codesolutions@xg237.onmicrosoft.com" 
-                className="block hover:text-white transition-colors"
+                className={`block ${theme === 'dark' ? 'hover:text-white' : 'hover:text-gray-900'} transition-colors`}
               >
                 codesolutions@xg237.onmicrosoft.com
               </a>
@@ -78,8 +78,8 @@ export function Footer() {
           </div>
           <div>
             <h3 className={`text-lg font-semibold mb-4 ${
-  theme === 'dark' ? 'text-white' : 'text-gray-900'
-}`}>
+              theme === 'dark' ? 'text-white' : 'text-gray-900'
+            }`}>
               {t.footer.newsletterTitle}
             </h3>
             <div className="flex space-x-2">
@@ -87,10 +87,10 @@ export function Footer() {
                 placeholder={t.footer.newsletterPlaceholder} 
                 type="email" 
                 className={`${
-  theme === 'dark' ? 'bg-[#2A303C] text-gray-200' : 'bg-gray-100 text-gray-800'
-} border-none placeholder:text-gray-400`}
+                  theme === 'dark' ? 'bg-gray-700 text-white' : 'bg-gray-100 text-gray-800'
+                } border-none placeholder:text-gray-400`}
               />
-              <Button className="bg-[#0066FF] hover:opacity-90 transition-opacity">
+              <Button className="bg-[#0066FF] hover:opacity-90 transition-opacity text-white">
                 {t.footer.newsletterButton}
               </Button>
             </div>
@@ -98,20 +98,20 @@ export function Footer() {
         </div>
       </div>
       <div className={`border-t ${
-  theme === 'dark' ? 'border-gray-800' : 'border-gray-200'
-}`}>
+        theme === 'dark' ? 'border-gray-800' : 'border-gray-200'
+      }`}>
         <div className="container mx-auto px-4 py-6">
           <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
             <p className={`text-sm ${
-  theme === 'dark' ? 'text-gray-400' : 'text-gray-500'
-}`}>
+              theme === 'dark' ? 'text-gray-400' : 'text-gray-500'
+            }`}>
               {t.footer.copyright}
             </p>
             <div className="flex flex-wrap justify-center gap-4">
-              <Link href="/terms" className="text-sm text-gray-400 hover:text-white transition-colors">{t.footer.terms}</Link>
-              <Link href="/privacy" className="text-sm text-gray-400 hover:text-white transition-colors">{t.footer.privacy}</Link>
-              <Link href="/cookies" className="text-sm text-gray-400 hover:text-white transition-colors">{t.footer.cookies}</Link>
-              <Link href="/accessibility" className="text-sm text-gray-400 hover:text-white transition-colors">{t.footer.accessibility}</Link>
+              <Link href="/terms" className={`text-sm ${theme === 'dark' ? 'text-gray-400 hover:text-white' : 'text-gray-600 hover:text-gray-900'} transition-colors`}>{t.footer.terms}</Link>
+              <Link href="/privacy" className={`text-sm ${theme === 'dark' ? 'text-gray-400 hover:text-white' : 'text-gray-600 hover:text-gray-900'} transition-colors`}>{t.footer.privacy}</Link>
+              <Link href="/cookies" className={`text-sm ${theme === 'dark' ? 'text-gray-400 hover:text-white' : 'text-gray-600 hover:text-gray-900'} transition-colors`}>{t.footer.cookies}</Link>
+              <Link href="/accessibility" className={`text-sm ${theme === 'dark' ? 'text-gray-400 hover:text-white' : 'text-gray-600 hover:text-gray-900'} transition-colors`}>{t.footer.accessibility}</Link>
             </div>
           </div>
         </div>
