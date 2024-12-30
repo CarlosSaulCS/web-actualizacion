@@ -25,8 +25,8 @@ export function Hero() {
             <Image
               src="/logo-limpio.png"
               alt="Code Solutions Studio Logo"
-              width={250}
-              height={250}
+              width={300}
+              height={300}
               className="mx-auto mb-8 rounded-full"
               priority
               unoptimized
