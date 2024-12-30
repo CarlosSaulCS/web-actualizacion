@@ -27,7 +27,7 @@ export function Footer() {
 
   return (
     <footer className={`${
-      theme === 'dark' ? 'bg-gray-900 text-gray-300' : 'bg-white text-gray-600'
+      theme === 'dark' ? 'bg-gray-900 dark:bg-gray-900 text-gray-300' : 'bg-white text-gray-600'
     }`}>
       <div className="container mx-auto py-16 px-4">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
@@ -50,11 +50,21 @@ export function Footer() {
               {t.footer.quickLinksTitle}
             </h3>
             <nav className="flex flex-col space-y-2">
-              <button onClick={() => handleNavigation('home')} className={`text-sm text-left ${theme === 'dark' ? 'text-gray-400 hover:text-white' : 'text-gray-600 hover:text-gray-900'} transition-colors`}>{t.nav.home}</button>
-              <button onClick={() => handleNavigation('nosotros')} className={`text-sm text-left ${theme === 'dark' ? 'text-gray-400 hover:text-white' : 'text-gray-600 hover:text-gray-900'} transition-colors`}>{t.nav.about}</button>
-              <button onClick={() => handleNavigation('servicios')} className={`text-sm text-left ${theme === 'dark' ? 'text-gray-400 hover:text-white' : 'text-gray-600 hover:text-gray-900'} transition-colors`}>{t.nav.services}</button>
-              <button onClick={() => handleNavigation('proyectos')} className={`text-sm text-left ${theme === 'dark' ? 'text-gray-400 hover:text-white' : 'text-gray-600 hover:text-gray-900'} transition-colors`}>{t.nav.projects}</button>
-              <button onClick={() => handleNavigation('contacto')} className={`text-sm text-left ${theme === 'dark' ? 'text-gray-400 hover:text-white' : 'text-gray-600 hover:text-gray-900'} transition-colors`}>{t.nav.contact}</button>
+              <button onClick={() => handleNavigation('home')} className={`text-sm text-left ${
+                theme === 'dark' ? 'text-gray-400 dark:text-gray-400 hover:text-white' : 'text-gray-600 hover:text-gray-900'
+              } transition-colors`}>{t.nav.home}</button>
+              <button onClick={() => handleNavigation('nosotros')} className={`text-sm text-left ${
+                theme === 'dark' ? 'text-gray-400 dark:text-gray-400 hover:text-white' : 'text-gray-600 hover:text-gray-900'
+              } transition-colors`}>{t.nav.about}</button>
+              <button onClick={() => handleNavigation('servicios')} className={`text-sm text-left ${
+                theme === 'dark' ? 'text-gray-400 dark:text-gray-400 hover:text-white' : 'text-gray-600 hover:text-gray-900'
+              } transition-colors`}>{t.nav.services}</button>
+              <button onClick={() => handleNavigation('proyectos')} className={`text-sm text-left ${
+                theme === 'dark' ? 'text-gray-400 dark:text-gray-400 hover:text-white' : 'text-gray-600 hover:text-gray-900'
+              } transition-colors`}>{t.nav.projects}</button>
+              <button onClick={() => handleNavigation('contacto')} className={`text-sm text-left ${
+                theme === 'dark' ? 'text-gray-400 dark:text-gray-400 hover:text-white' : 'text-gray-600 hover:text-gray-900'
+              } transition-colors`}>{t.nav.contact}</button>
             </nav>
           </div>
           <div>
@@ -64,7 +74,7 @@ export function Footer() {
               {t.footer.contactTitle}
             </h3>
             <div className={`text-sm ${
-              theme === 'dark' ? 'text-gray-400' : 'text-gray-500'
+              theme === 'dark' ? 'text-gray-400 dark:text-gray-400' : 'text-gray-500'
             } space-y-2`}>
               <a 
                 href="mailto:codesolutions@xg237.onmicrosoft.com" 

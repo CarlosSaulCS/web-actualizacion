@@ -37,7 +37,7 @@ export function ContactForm() {
 
   return (
     <Card className={`w-full border-none shadow-xl ${
-  theme === 'dark' ? 'bg-gray-800 text-white' : 'bg-white text-gray-800'
+  theme === 'dark' ? 'bg-gray-800 dark:bg-gray-800' : 'bg-white'
 }`}>
       <CardContent className="p-8">
         <form onSubmit={handleSubmit} className="space-y-6">
@@ -48,7 +48,7 @@ export function ContactForm() {
               onChange={(e) => setFormData({ ...formData, name: e.target.value })}
               required
               className={`${
-  theme === 'dark' ? 'bg-[#2A303C] text-gray-200' : 'bg-gray-100 text-gray-800'
+  theme === 'dark' ? 'bg-gray-700 dark:bg-gray-700 text-white' : 'bg-gray-100 text-gray-800'
 } border-none placeholder:text-gray-400`}
             />
           </div>
@@ -60,7 +60,7 @@ export function ContactForm() {
               onChange={(e) => setFormData({ ...formData, email: e.target.value })}
               required
               className={`${
-  theme === 'dark' ? 'bg-[#2A303C] text-gray-200' : 'bg-gray-100 text-gray-800'
+  theme === 'dark' ? 'bg-gray-700 dark:bg-gray-700 text-white' : 'bg-gray-100 text-gray-800'
 } border-none placeholder:text-gray-400`}
             />
           </div>
@@ -71,7 +71,7 @@ export function ContactForm() {
               onChange={(e) => setFormData({ ...formData, message: e.target.value })}
               required
               className={`${
-  theme === 'dark' ? 'bg-[#2A303C] text-gray-200' : 'bg-gray-100 text-gray-800'
+  theme === 'dark' ? 'bg-gray-700 dark:bg-gray-700 text-white' : 'bg-gray-100 text-gray-800'
 } border-none placeholder:text-gray-400 min-h-[150px]`}
             />
           </div>
