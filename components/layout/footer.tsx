@@ -29,8 +29,8 @@ export function Footer() {
     <footer className={`${
       theme === 'dark' ? 'bg-gray-900 dark:bg-gray-900 text-gray-300' : 'bg-white text-gray-600'
     }`}>
-      <div className="container mx-auto py-16 px-4">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
+      <div className="container mx-auto py-8 px-4"> {/* Reduced padding from py-16 to py-8 */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8"> {/* Reduced gap from gap-12 to gap-8 */}
           <div>
             <h3 className={`text-lg font-semibold mb-4 ${
               theme === 'dark' ? 'text-white' : 'text-gray-900'
@@ -110,7 +110,7 @@ export function Footer() {
       <div className={`border-t ${
         theme === 'dark' ? 'border-gray-800' : 'border-gray-200'
       }`}>
-        <div className="container mx-auto px-4 py-6">
+        <div className="container mx-auto px-4 py-4"> {/* Reduced padding from py-6 to py-4 */}
           <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
             <p className={`text-sm ${
               theme === 'dark' ? 'text-gray-400' : 'text-gray-500'
