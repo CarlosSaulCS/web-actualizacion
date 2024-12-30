@@ -66,7 +66,7 @@ export function Services() {
   const [hoveredIndex, setHoveredIndex] = useState<number | null>(null)
 
   return (
-    <section className="w-full py-24 bg-background dark:bg-gray-900">
+    <section className="w-full py-16 sm:py-20 bg-background dark:bg-[#0A1120]">
       <div className="container mx-auto px-4 flex flex-col items-center">
         <ScrollAnimation>
           <h2 className="text-3xl font-bold text-center mb-12 bg-gradient-to-r from-[#0066FF] to-[#00FFB2] bg-clip-text text-transparent">
@@ -77,7 +77,7 @@ export function Services() {
           {t.items.map((service, index) => (
             <ScrollAnimation key={index}>
               <motion.div
-                className="flip-card cursor-pointer h-[300px]"
+                className="flip-card cursor-pointer h-[400px] md:h-[300px]"
                 initial={{ opacity: 0, scale: 0.8 }}
                 animate={{ opacity: 1, scale: 1 }}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
@@ -86,14 +86,14 @@ export function Services() {
                 onHoverEnd={() => setHoveredIndex(null)}
               >
                 <div className={`flip-card-inner ${hoveredIndex === index ? 'flipped' : ''}`}>
-                  <div className="flip-card-front bg-white dark:bg-gray-800 text-gray-800 dark:text-gray-200 rounded-xl shadow-lg p-6 flex flex-col items-center justify-center h-full">
+                  <div className="flip-card-front bg-white dark:bg-gray-800 text-gray-800 dark:text-gray-200 rounded-xl shadow-lg p-4 md:p-6 flex flex-col items-center justify-center h-full">
                     {getIcon(service.icon)}
                     <h3 className="text-xl font-bold mt-4 text-center">{service.title}</h3>
                     <div className="flex mt-4">
                       {getTechIcons(service.technologies)}
                     </div>
                   </div>
-                  <div className="flip-card-back bg-gradient-to-r from-[#0066FF] to-[#00FFB2] text-white rounded-xl shadow-lg p-6 flex flex-col items-center justify-center h-full">
+                  <div className="flip-card-back bg-gradient-to-r from-[#0066FF] to-[#00FFB2] text-white rounded-xl shadow-lg p-4 md:p-6 flex flex-col items-center justify-center h-full">
                     <p className="text-sm text-center">{service.description}</p>
                     <div className="flex mt-4">
                       {getTechIcons(service.technologies)}

@@ -18,15 +18,15 @@ export function Hero() {
   }
 
   return (
-    <section className="w-full py-16 flex flex-col items-center justify-center min-h-[80vh] bg-background dark:bg-[#0A1120] transition-colors">
+    <section className="w-full py-12 sm:py-16 flex flex-col items-center justify-center min-h-[80vh] bg-background dark:bg-[#0A1120] transition-colors">
       <div className="container mx-auto px-4">
         <div className="flex flex-col items-center justify-center space-y-6 text-center max-w-4xl mx-auto">
           <ScrollAnimation>
             <Image
               src="/logo-limpio.png"
               alt="Code Solutions Studio Logo"
-              width={300}
-              height={300}
+              width={250}
+              height={250}
               className="mx-auto mb-8 rounded-full"
               priority
               unoptimized

@@ -38,10 +38,10 @@ export function ThemeProvider({
         ? 'dark'
         : 'light'
       root.classList.add(systemTheme)
-      return
+      setTheme(systemTheme)
+    } else {
+      root.classList.add(theme)
     }
-
-    root.classList.add(theme)
   }, [theme, enableSystem])
 
   return (
