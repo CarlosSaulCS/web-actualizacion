@@ -27,8 +27,8 @@ export function Footer() {
 
   return (
     <footer className={`${
-      theme === 'dark' ? 'bg-gray-900 dark:bg-gray-900 text-gray-300' : 'bg-white text-gray-600'
-    } -mb-[1px]`}>
+      theme === 'dark' ? 'bg-[#0A1120] dark:bg-[#0A1120] text-gray-300' : 'bg-white text-gray-600'
+    } mt-auto`}>
       <div className="container mx-auto py-6 px-4">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           <div>
