@@ -43,8 +43,8 @@ export function Projects() {
       video: "/clip-ropa.mp4"
     },
     {
-      titleEn: "ERP System",
-      titleEs: "Sistema ERP",
+      titleEn: "CRM System",
+      titleEs: "Sistema CRM",
       description: t.items[1].description,
       features: t.items[1].features,
       image: "/mini-crm.png",
@@ -96,7 +96,7 @@ export function Projects() {
   };
 
   return (
-    <section className="w-full py-24 bg-background dark:bg-gray-900">
+    <section className="w-full py-24 bg-background dark:bg-[#0A1120]">
       <div className="container mx-auto px-4 flex flex-col items-center">
         <ScrollAnimation>
           <h2 className="text-3xl font-bold text-center mb-12 bg-gradient-to-r from-[#0066FF] to-[#00FFB2] bg-clip-text text-transparent">

@@ -9,7 +9,7 @@ export function ContactSection() {
   const { language } = useLanguage()
   const t = translations[language]
   return (
-    <section className="w-full py-24 bg-background dark:bg-gray-900">
+    <section className="w-full py-24 bg-background dark:bg-[#0A1120]">
       <div className="container mx-auto px-4 flex flex-col items-center">
         <ScrollAnimation>
           <h2 className="text-3xl font-bold text-center mb-12 bg-gradient-to-r from-[#0066FF] to-[#00FFB2] bg-clip-text text-transparent">

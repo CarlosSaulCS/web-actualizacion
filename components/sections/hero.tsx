@@ -18,7 +18,7 @@ export function Hero() {
   }
 
   return (
-    <section className="w-full py-16 flex flex-col items-center justify-center min-h-[80vh] bg-background dark:bg-gray-900 transition-colors">
+    <section className="w-full py-16 flex flex-col items-center justify-center min-h-[80vh] bg-background dark:bg-[#0A1120] transition-colors">
       <div className="container mx-auto px-4">
         <div className="flex flex-col items-center justify-center space-y-6 text-center max-w-4xl mx-auto">
           <ScrollAnimation>
@@ -29,6 +29,7 @@ export function Hero() {
               height={250}
               className="mx-auto mb-8 rounded-full"
               priority
+              unoptimized
             />
           </ScrollAnimation>
           <ScrollAnimation>

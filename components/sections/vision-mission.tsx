@@ -10,7 +10,7 @@ export function VisionMission() {
   const t = translations[language].about
 
   return (
-    <section className="w-full py-24 bg-background dark:bg-gray-900">
+    <section className="w-full py-24 bg-background dark:bg-[#0A1120]">
       <div className="container mx-auto px-4 flex flex-col items-center">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 w-full max-w-7xl">
           <ScrollAnimation>
