@@ -4,6 +4,7 @@ import { Footer } from '@/components/layout/footer'
 import { WhatsAppButton } from '@/components/WhatsAppButton'
 import { LanguageProvider } from '@/contexts/LanguageContext'
 import { ThemeProvider } from '@/contexts/ThemeContext'
+import { Toaster } from 'sonner'
 import './globals.css'
 
 const inter = Inter({ subsets: ['latin'] })
@@ -24,6 +25,7 @@ export default function RootLayout({
             </main>
             <Footer />
             <WhatsAppButton />
+            <Toaster />
           </LanguageProvider>
         </ThemeProvider>
       </body>
