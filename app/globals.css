@@ -177,3 +177,17 @@ footer {
   margin-top: auto;
 }
 
+/* Add to prevent layout shifts */
+.project-carousel-container {
+  position: relative;
+  overflow: hidden;
+  contain: layout size style;
+  transform: translateZ(0);
+  backface-visibility: hidden;
+}
+
+/* Improve performance for animations */
+.motion-safe:transform {
+  will-change: transform;
+}
+

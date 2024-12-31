@@ -74,13 +74,35 @@ export function Projects() {
   }, [projects.length]);
 
   useEffect(() => {
-    intervalRef.current = setInterval(() => {
-      nextProject();
-    }, 5000); // Change project every 5 seconds
+    // Only start the interval if the section is in view
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            intervalRef.current = setInterval(() => {
+              nextProject();
+            }, 5000);
+          } else {
+            if (intervalRef.current) {
+              clearInterval(intervalRef.current);
+            }
+          }
+        });
+      },
+      { threshold: 0.1 }
+    );
+
+    const projectsSection = document.getElementById('proyectos');
+    if (projectsSection) {
+      observer.observe(projectsSection);
+    }
 
     return () => {
       if (intervalRef.current) {
         clearInterval(intervalRef.current);
+      }
+      if (projectsSection) {
+        observer.unobserve(projectsSection);
       }
     };
   }, [nextProject]);
@@ -96,14 +118,14 @@ export function Projects() {
   };
 
   return (
-    <section className="w-full py-16 sm:py-20 bg-background dark:bg-[#0A1120]">
+    <section id="proyectos" className="w-full py-16 sm:py-20 bg-background dark:bg-[#0A1120]">
       <div className="container mx-auto px-4 flex flex-col items-center">
         <ScrollAnimation>
           <h2 className="text-3xl font-bold text-center mb-12 bg-gradient-to-r from-[#0066FF] to-[#00FFB2] bg-clip-text text-transparent">
             {t.title}
           </h2>
         </ScrollAnimation>
-        <div className="relative w-full max-w-4xl">
+        <div className="relative w-full max-w-4xl h-[600px] md:h-[500px]">
           <AnimatePresence initial={false} custom={currentProject} mode="wait">
             <motion.div
               key={currentProject}
@@ -112,16 +134,22 @@ export function Projects() {
                 enter: (direction: number) => ({
                   x: direction > 0 ? 300 : -300,
                   opacity: 0,
+                  position: 'absolute',
+                  width: '100%',
                 }),
                 center: {
                   zIndex: 1,
                   x: 0,
                   opacity: 1,
+                  position: 'absolute',
+                  width: '100%',
                 },
                 exit: (direction: number) => ({
                   zIndex: 0,
                   x: direction < 0 ? 300 : -300,
                   opacity: 0,
+                  position: 'absolute',
+                  width: '100%',
                 }),
               }}
               initial="enter"
