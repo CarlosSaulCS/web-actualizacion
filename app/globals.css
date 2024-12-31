@@ -149,14 +149,22 @@ html {
   }
 }
 
-/* Add consistent section spacing */
-section {
+/* Update the section spacing rule */
+section:not(:last-child) {
   padding: 4rem 0;
 }
 
+section:last-child {
+  padding: 4rem 0 0 0;
+}
+
 @media (min-width: 768px) {
-  section {
+  section:not(:last-child) {
     padding: 6rem 0;
+  }
+  
+  section:last-child {
+    padding: 6rem 0 0 0;
   }
 }
 
